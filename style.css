@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --mainBlack: #222;
+  --mainWhite: #fff;
+  --bodyColor: #f6f6f6;
+
+  --primaryColor: #6a34ff;
+  --secondaryColor: #d9cbff;
+  --mainGrey: #7c7c7c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "poppins";
+}
+body {
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: "poppins";
+  background-color: var(--bodyColor);
+  font-size: 1.5rem;
+}
+
+/* header */
+header {
+  background-color: var(--secondaryColor);
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+#search {
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  width: 20rem;
+}
+#search:focus {
+  border: 2px solid var(--primaryColor);
+}
+
+.filter-box {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+.btn {
+  font-family: "poppins";
+  cursor: pointer;
+  background-color: var(--mainWhite);
+  border: 1px solid var(--primaryColor);
+  border-radius: 4px;
+  padding: 0.8rem;
+  text-transform: capitalize;
+  color: var(--primaryColor);
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.btn:hover {
+  background-color: var(--primaryColor);
+  color: var(--mainWhite);
+}
+
+/* products */
+.products {
+  width: 90vw;
+  margin: 16px auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 5rem;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--mainWhite);
+  border-radius: 5px;
+}
+.product-des {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 3rem;
+}
+.products-price {
+  color: var(--primaryColor);
+}
+.products-title {
+  text-transform: capitalize;
+  font-size: 1.8rem;
+}
